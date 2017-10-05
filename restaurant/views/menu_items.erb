@@ -2,33 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title> Fred's Here </title>
+    <title> Fred is Here </title>
   </head>
   <body>
-
-
-
     <main>
-
-<!-- # iterating through a hash.  i is the index i+q # -->
-
       <ul>
-        <% @menu_items.each_with_index do |menu_item, i| %>
-        <li>
-          <a href = "/menu_items"/ <% menu_item.id %>"><%= menu_item.name  %> </a>
-
-
-      </li>
-        <% end %>
+          <% @menu_items.each do |menu_item| %>
+            <li>
+                <a href="/menu_items/<%= menu_item.id %>"><%= menu_item.name %></a>
+            </li>
+            <% end %>
       </ul>
-
     </main>
-
-
-
-
-
-
   </body>
 </html>
 
